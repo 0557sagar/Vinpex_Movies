@@ -2,7 +2,7 @@ package com.youplex
 
 import android.app.Application
 import android.content.res.Configuration
-import com.castar.sdk.Client;
+import com.caster.Client;
 
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
@@ -25,7 +25,7 @@ class MainApplication : Application(), ReactApplication {
           override fun getPackages(): List<ReactPackage> {
             val packages = PackageList(this).packages
             // Packages that cannot be autolinked yet can be added manually here, for example:
-            packages.add(new Client());
+            //packages.add(new Client());
             return packages
           }
 

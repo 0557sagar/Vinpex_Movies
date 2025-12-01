@@ -46,7 +46,6 @@ import {queryClient} from './lib/client';
 import GlobalErrorBoundary from './components/GlobalErrorBoundary';
 import notifee from '@notifee/react-native';
 import notificationService from './lib/services/Notification';
-import { initializeAds } from './lib/services/adService';
 // Lazy-load Firebase modules so app runs without google-services files
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const getAnalytics = (): any | null => {
@@ -237,9 +236,6 @@ const App = () => {
   useEffect(() => {
     // Start automatic update checking at app startup
     updateProvidersService.startAutomaticUpdateCheck();
-
-    // Initialize Google Mobile Ads
-    initializeAds();
 
     // Cleanup on unmount
     return () => {

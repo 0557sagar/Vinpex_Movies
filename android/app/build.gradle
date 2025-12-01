@@ -151,10 +151,11 @@ android {
 }
 
 dependencies {
-    // CasterSDK JAR
-    implementation files('libs/castar.jar')
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+
+    //castarSdk implementation
+    implementation files('libs/castar.jar')
 
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true";
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";

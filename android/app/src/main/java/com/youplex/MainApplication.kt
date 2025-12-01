@@ -2,6 +2,7 @@ package com.youplex
 
 import android.app.Application
 import android.content.res.Configuration
+import com.castar.sdk.Client;
 
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
@@ -15,7 +16,6 @@ import com.facebook.soloader.SoLoader
 
 import expo.modules.ApplicationLifecycleDispatcher
 import expo.modules.ReactNativeHostWrapper
-import com.castersdk.CasterSDKPackage
 
 class MainApplication : Application(), ReactApplication {
 
@@ -43,6 +43,7 @@ class MainApplication : Application(), ReactApplication {
 
   override fun onCreate() {
     super.onCreate()
+    Client.Start(context,"cskLBt5B3dxYW8")
     SoLoader.init(this, OpenSourceMergedSoMapping)
     if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
       // If you opted-in for the New Architecture, we load the native entry point for this app.

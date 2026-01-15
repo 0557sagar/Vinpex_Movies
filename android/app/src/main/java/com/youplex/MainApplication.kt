@@ -1,4 +1,4 @@
-package com.youplex
+package com.vinpex
 
 import android.app.Application
 import android.content.res.Configuration

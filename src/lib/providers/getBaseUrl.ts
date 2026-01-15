@@ -16,7 +16,7 @@ export const getBaseUrl = async (providerValue: string) => {
       baseUrl = cachedUrl;
     } else {
       const baseUrlRes = await fetch(
-        'https://himanshu8443.github.io/providers/modflix.json',
+        'https://github.com/DHR-Store/vega-providers/blob/main/manifest.json',
       );
       const baseUrlData = await baseUrlRes.json();
       baseUrl = baseUrlData[providerValue].url;
@@ -29,3 +29,4 @@ export const getBaseUrl = async (providerValue: string) => {
     return '';
   }
 };
+
